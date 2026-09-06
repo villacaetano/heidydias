@@ -2770,3 +2770,190 @@ body {
 .hero .fish {
   display: none !important;
 }
+
+
+
+/*--------------------------------------------------------------
+# Mobile layout — centred, balanced tiles
+--------------------------------------------------------------*/
+@media (max-width: 991px) {
+
+  .hero {
+    min-height: auto;
+    padding: 60px 16px 50px !important;
+    text-align: center;
+  }
+
+  .hero .hero-content,
+  .hero .container,
+  .hero .row,
+  .hero .col-lg-6 {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .hero .hero-text {
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+
+  .hero .hero-text h1 {
+    font-size: 40px;
+    line-height: 1.15;
+  }
+
+  .hero .hero-text h2 {
+    font-size: 20px;
+  }
+
+  .hero .hero-text .lead {
+    font-size: 17px;
+  }
+
+  .hero .hero-text .description {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+  }
+
+  .hero .hero-actions {
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .hero .social-links {
+    justify-content: center;
+  }
+
+  .hero .hero-visual {
+    margin: 0 auto;
+  }
+
+  .hero .hero-visual .profile-container {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+  }
+
+  .about .row,
+  .resume .row,
+  .skills .row,
+  .contact .row {
+    text-align: center;
+  }
+
+  .about .profile-card {
+    max-width: 360px;
+    margin: 0 auto 30px;
+  }
+
+  .about .about-content,
+  .about .description,
+  .about .section-header {
+    text-align: center;
+  }
+
+  .about .stats-grid,
+  .about .details-grid,
+  .about .cta-section {
+    justify-content: center;
+  }
+
+  .about .cta-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .resume .col-lg-4,
+  .resume .col-lg-8 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .resume .resume-side {
+    text-align: center;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .resume .profile-img img {
+    max-width: 220px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .resume .resume-item,
+  .resume .resume-section {
+    text-align: left;
+  }
+
+  .skills .skills-category {
+    margin-bottom: 30px;
+  }
+
+  .portfolio .filter-sidebar {
+    margin-bottom: 20px;
+  }
+
+  .portfolio .portfolio-filters {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .portfolio .portfolio-filters li {
+    border-left: 0 !important;
+    border-radius: 999px !important;
+    padding: 8px 14px !important;
+  }
+
+  .portfolio .col-lg-9,
+  .portfolio .portfolio-container,
+  .portfolio .portfolio-item {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .portfolio .portfolio-wrap img {
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .services .service-card {
+    margin: 0 0 18px;
+    height: auto;
+    text-align: center;
+  }
+
+  .contact .info-box {
+    text-align: left;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero .hero-visual .profile-container {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto;
+  }
+
+  .about .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .portfolio .portfolio-wrap img {
+    height: 200px;
+  }
+}
