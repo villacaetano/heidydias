@@ -2540,3 +2540,233 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* Remove left sidebar and use a top bar */
+@media (min-width: 1200px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    height: 72px !important;
+    flex-direction: row !important;
+    padding: 0 30px !important;
+    border-right: 0 !important;
+  }
+
+  .header .header-container {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .header .navmenu ul {
+    flex-direction: row !important;
+    gap: 22px;
+  }
+
+  .header .navmenu ul li {
+    padding: 0;
+  }
+
+  .header~main,
+  .header~#footer {
+    margin-left: 0 !important;
+  }
+
+  .hero {
+    padding-top: 90px;
+  }
+}
+
+.header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Hide old sidebar socials if still present */
+.header .social-links {
+  display: none;
+}
+
+/* Remove leftover menu / top bar */
+.header,
+.header-toggle,
+.page-title {
+  display: none !important;
+}
+
+.header~main,
+.header~#footer,
+main,
+#footer {
+  margin-left: 0 !important;
+}
+
+.hero {
+  padding-top: 0 !important;
+}
+
+#preloader {
+  display: none !important;
+}
+
+#preloader {
+  display: none !important;
+}
+
+/* Show content even if animations fail */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.header~main,
+.header~#footer,
+main,
+#footer {
+  margin-left: 0 !important;
+}
+
+
+
+/*--------------------------------------------------------------
+# Dark ocean theme + hero photo
+--------------------------------------------------------------*/
+:root {
+  --background-color: #07111c;
+  --default-color: #e6eef4;
+  --heading-color: #f4f8fb;
+  --accent-color: #7eb8c9;
+  --surface-color: #102033;
+  --contrast-color: #07111c;
+
+  --nav-color: #d7e6ee;
+  --nav-hover-color: #ffffff;
+  --nav-mobile-background-color: #0b1a2a;
+  --nav-dropdown-background-color: #0b1a2a;
+  --nav-dropdown-color: #e6eef4;
+  --nav-dropdown-hover-color: #7eb8c9;
+}
+
+.light-background {
+  --background-color: #0b1a2a;
+  --surface-color: #12263a;
+}
+
+body {
+  background-color: #07111c;
+  color: #e6eef4;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-color: #07111c;
+  background-image:
+    linear-gradient(rgba(7, 17, 28, 0.40), rgba(7, 17, 28, 0.62)),
+    url("../img/ocean-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero .background-elements {
+  display: none;
+}
+
+.hero .hero-text h1,
+.hero .hero-text h2,
+.hero .hero-text .lead,
+.hero .hero-text .description {
+  color: #f4f8fb;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.hero .accent-text {
+  color: #7eb8c9;
+}
+
+.section,
+.about,
+.stats,
+.skills,
+.resume,
+.portfolio,
+.services,
+.contact,
+.footer {
+  background-color: #07111c;
+}
+
+.stats.light-background {
+  background-color: #0b1a2a !important;
+}
+
+#preloader {
+  display: none !important;
+}
+
+
+
+.hero .background-elements {
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .background-elements .bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(126, 184, 201, 0.22), rgba(126, 184, 201, 0.04) 70%);
+  border: 1px solid rgba(126, 184, 201, 0.14);
+  animation: heroFloat 10s ease-in-out infinite;
+}
+
+.hero .background-elements .circle-1 { width: 340px; height: 340px; top: 8%; right: 8%; }
+.hero .background-elements .circle-2 { width: 220px; height: 220px; bottom: 16%; left: 6%; animation-delay: -4s; }
+.hero .background-elements .circle-3 { width: 140px; height: 140px; top: 28%; left: 18%; animation-delay: -2s; }
+.hero .background-elements .circle-4 { width: 90px; height: 90px; bottom: 28%; right: 22%; animation-delay: -6s; }
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-22px); }
+}
+
+.hero .bubble {
+  position: absolute;
+  bottom: -40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), rgba(126,184,201,0.08) 60%, transparent 70%);
+  border: 1px solid rgba(255,255,255,0.18);
+  animation: rise 16s linear infinite;
+}
+
+.hero .bubble.b1 { width: 10px; height: 10px; left: 12%; animation-duration: 14s; }
+.hero .bubble.b2 { width: 16px; height: 16px; left: 28%; animation-duration: 20s; animation-delay: -4s; }
+.hero .bubble.b3 { width: 8px;  height: 8px;  left: 46%; animation-duration: 12s; animation-delay: -7s; }
+.hero .bubble.b4 { width: 20px; height: 20px; left: 62%; animation-duration: 24s; animation-delay: -2s; }
+.hero .bubble.b5 { width: 12px; height: 12px; left: 78%; animation-duration: 18s; animation-delay: -10s; }
+.hero .bubble.b6 { width: 7px;  height: 7px;  left: 90%; animation-duration: 13s; animation-delay: -6s; }
+
+@keyframes rise {
+  0%   { transform: translateY(0); opacity: 0; }
+  12%  { opacity: 0.8; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+.hero .fish {
+  display: none !important;
+}
