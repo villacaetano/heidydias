@@ -3000,3 +3000,71 @@ body {
   background: linear-gradient(rgba(7, 17, 28, 0.42), rgba(7, 17, 28, 0.62));
   pointer-events: none;
 }
+
+/* Fix research tiles */
+.portfolio .filter-sidebar {
+  display: none !important;
+}
+
+.portfolio .col-lg-9 {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+}
+
+.portfolio .isotope-container,
+.portfolio .portfolio-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  height: auto !important;
+}
+
+.portfolio .portfolio-item,
+.portfolio .isotope-item {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+.portfolio .portfolio-wrap {
+  height: 100%;
+}
+
+.portfolio .portfolio-wrap img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* Keep About stats tiles balanced */
+.about .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.about .details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+}
+
+.about .detail-row {
+  display: contents;
+}
+
+@media (max-width: 767px) {
+  .portfolio .isotope-container,
+  .portfolio .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about .stats-grid,
+  .about .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
